@@ -42,9 +42,6 @@ function displayEmployees(employeeData) {
 }
 
 function displayModal(index) {
-  console.log(index);
-  console.log(employees);
-  console.log(employees[index]);
   // use object destructuring make our template literal cleaner
   let {
     name,
@@ -82,21 +79,23 @@ gridContainer.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
     var index = card.getAttribute("data-index");
     displayModal(index);
-
-    if (index < 11) {
-      modalNext.addEventListener("click", () => {
-        index++;
-        displayModal(index);
-      });
-    }
-
-    if (index > 0) {
-      modalPrevious.addEventListener("click", () => {
-        index--;
-        displayModal(index);
-      });
-    }
   }
+
+  modalNext.addEventListener("click", () => {
+    if (index < 11) {
+      index++;
+      displayModal(index);
+      console.log(index);
+    }
+  });
+
+  modalPrevious.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      displayModal(index);
+      console.log(index);
+    }
+  });
 });
 
 modalClose.addEventListener("click", () => {
