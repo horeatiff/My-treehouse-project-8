@@ -82,7 +82,7 @@ gridContainer.addEventListener("click", (e) => {
   }
 
   modalNext.addEventListener("click", () => {
-    if (index < 11) {
+    if (index < employees.length - 1) {
       index++;
       displayModal(index);
       console.log(index);
@@ -105,18 +105,21 @@ modalClose.addEventListener("click", () => {
 // search for names
 nameSearch.addEventListener("keyup", (e) => {
   let currentValue = e.target.value.toLowerCase();
-  console.log(employees);
-  const foundUsers = employees.filter((employee) => {
+  let foundUsersIndex = [];
+
+  employees.filter((employee, i) => {
     const name = String(employee.name.first + employee.name.last).toLowerCase();
+
+    if (name.includes(currentValue)) {
+      foundUsersIndex.push(i);
+    }
+
     return name.includes(currentValue);
   });
-  console.log(foundUsers);
-  //   let users = document.querySelectorAll("h2.name");
-  //   users.forEach((user) => {
-  //     if (user.textContent.toLowerCase().includes(currentValue)) {
-  //       user.parentNode.parentNode.style.display = "flex";
-  //     } else {
-  //       user.parentNode.parentNode.style.display = "none";
-  //     }
-  //   });
+
+  document.querySelectorAll(".card").forEach((card) => {
+    foundUsersIndex.includes(parseInt(card.dataset.index))
+      ? (card.style.display = "flex")
+      : (card.style.display = "none");
+  });
 });

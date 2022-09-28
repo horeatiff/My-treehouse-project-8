@@ -1,20 +1,26 @@
 body {
-  display:flex;
-  flex-direction:column;
+  /*flex properties */
+  display: flex;
+  flex-direction: column;
+  /*sizing and positioning */
   width: auto;
-  font-family: "Inter", sans-serif;
-  background-color: rgb(252, 252, 252);
   padding-left: 10px;
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+  /*font properties*/
+  font-family: "Inter", sans-serif;
+  /*colors*/
+  background-color: rgb(252, 252, 252);
 }
 
 main {
+  /*grid properties */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  /*sizing and positioning */
   width: fit-content;
   margin: auto;
   margin-bottom: 20px;
@@ -22,6 +28,7 @@ main {
 }
 
 .nav-buttons {
+  /*flex properties */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,131 +36,171 @@ main {
 
 .modal-prev,
 .modal-next {
+  /*sizing and positioning */
   border-radius: 8px;
   width: 100px;
+  /*decoration */
   border: none;
+  /*colors*/
   background-color: rgba(223, 223, 223, 0.2);
+  /*transitions*/
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .modal-prev:hover,
 .modal-next:hover {
+  /*transitions*/
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /*cursor*/
   cursor: pointer;
 }
 
 .modal-next {
+  /*sizing and positioning */
   text-align: right;
 }
 
 .modal-left {
+  /*sizing and positioning */
   text-align: left;
 }
 
 header {
+  /*flex properties */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto; 
+  /*sizing and positioning */
+  margin-left: auto;
   margin-right: auto;
-
 }
-h1{
-  margin-top:20px;
-  margin-bottom:20px;
+h1 {
+  /*sizing and positioning */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .input-container {
+  /*sizing and positioning */
   margin-bottom: 10px;
   align-items: center;
 }
 
 input {
+  /*sizing and positioning */
   width: 200px;
-  border-radius: 8px;
-  background-color: rgba(223, 223, 223, 0.8);
-  border-style: none;
   border-width: 2px;
   padding: 5px;
+  /*decoration */
+  border-radius: 8px;
+  border-style: none;
+  /*colors*/
+  background-color: rgba(223, 223, 223, 0.8);
 }
 
 input::placeholder {
+  /*colors*/
   color: black;
 }
 
 h1 {
+  /*font properties*/
   font-size: 20px;
 }
 
 .overlay {
+  /*sizing and positioning */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  /*colors*/
   background: rgba(100, 100, 100, 0.4);
 }
 
 .modal {
+  /*sizing and positioning */
   width: 375px;
+  text-align: center;
+  padding: 30px 20px;
+  /*decoration */
   margin: 8% auto auto;
   position: relative;
-  text-align: center;
+  /*colors*/
   background: #fff;
   border: 1px solid rgb(223, 223, 223);
+  /*decoration */
   border-radius: 10px;
-  padding: 30px 20px;
 }
 
 .modal-close {
+  /*sizing and positioning */
   position: absolute;
   right: 30px;
   top: 15px;
+  /*cursor */
   cursor: pointer;
+  /*decoration */
   border: none;
   border-radius: 6px;
+  /*colors*/
   background-color: rgba(223, 223, 223, 0.2);
+  /*transitions*/
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
+  /*font properties*/
   font-size: 20px;
 }
 
 .modal-close:hover {
+  /*transitions*/
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /*cursor*/
   cursor: pointer;
 }
 
 .hidden {
+  /*flex properties */
   display: none;
 }
 
 img {
+  /*sizing and positioning */
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card {
+  /*flex properties */
   display: flex;
   align-items: center;
+  /*decoration */
   border: solid;
   border-width: 1px;
   border-radius: 8px;
+  /*colors*/
   border-color: rgb(223, 223, 223);
   background-color: rgb(255, 255, 255);
+  /*transitions*/
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
+  /*sizing and positioning */
   width: 400px;
   height: 180px;
 }
 
 .card:hover {
+  /*transitions*/
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /*cursor*/
   cursor: pointer;
 }
 
 .text-container {
+  /*sizing and positioning */
   margin-left: auto;
   margin-right: auto;
 }
